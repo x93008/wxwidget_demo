@@ -4,3 +4,6 @@ wxwidgets/3.2.6
 [generators]
 CMakeDeps
 CMakeToolchain
+
+[layout]
+cmake_layout
