@@ -1,0 +1,6 @@
+[requires]
+wxwidgets/3.2.6
+
+[generators]
+CMakeDeps
+CMakeToolchain
