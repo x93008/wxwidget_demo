@@ -11,6 +11,10 @@ find_package(wxWidgets REQUIRED CONFIG)
 
 aux_source_directory(src SRC)
 
-add_executable(${APP_NAME} ${SRC})
+if (CMAKE_SYSTEM_NAME MATCHES "Windows")
+    add_executable(${APP_NAME} WIN32 ${SRC})
+else()
+    add_executable(${APP_NAME} ${SRC})
+endif()
 
-target_link_libraries(${APP_NAME} wxWidgets::wxWidgets)
+target_link_libraries(${APP_NAME} PRIVATE wxWidgets::wxWidgets)
